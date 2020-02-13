@@ -1,0 +1,36 @@
+.chat-main
+  .chat-main__group-info
+    .chat-main__group-info__info-box
+      .chat-main__group-info__info-box__group-name
+        %p techcamp
+      .chat-main__group-info__info-box__edit-btn
+        = link_to "#", class:"btn group-edit-btn" do
+          Edit
+    %ul.chat-main__group-info__member-list
+      %li Member :
+      %li suzuki
+
+  .chat-main__message-list
+    .chat-main__message-list__message-container
+      .chat-main__message-list__message-container__property
+        %p.chat-main__message-list__message-container__property__user-name
+          suzuki
+        %p.chat-main__message-list__message-container__property__date
+          2020/02/12(Wed) 00:00:00
+      %p.chat-main__message-list__message-container__message
+        おはよう
+    .chat-main__message-list__message-container
+      .chat-main__message-list__message-container__property
+        %p.chat-main__message-list__message-container__property__user-name
+          suzuki
+        %p.chat-main__message-list__message-container__property__date
+          2020/02/13(Thu) 12:00:00
+      %p.chat-main__message-list__message-container__message
+        こんにちは
+  .chat-main__message-form
+    .chat-main__message-form__form-container
+      %input{:type => "text", :class => "message__text-area", :placeholder =>"type a message"}/
+      %label{class: "form-container-image"}
+        = icon('far', 'image', class: "message__image-icon")
+        %input{:type => "file", :class => "message-image-file"}/
+    %input.chat-main__message-form__send-btn{ :type => "submit", :name => "committ", :value => "Send",}/
